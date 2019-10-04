@@ -11,13 +11,13 @@ $dir = "./log"; /** define the directory **/
 foreach (glob($dir."/*") as $file) {
 
 /*
- 31536000 => 'year',
- 2592000 => 'month',
- 604800 => 'week',
- 86400 => 'day',
- 3600 => 'hour',
- 60 => 'minute',
- 1 => 'second'
+ 31536000 => 'year', 　年
+ 2592000 => 'month',　月
+ 604800 => 'week',　　週
+ 86400 => 'day',　　　日
+ 3600 => 'hour',　　　時間
+ 60 => 'minute',　　　分
+ 1 => 'second'　　　　秒
 */
 
 //英語版
@@ -27,6 +27,11 @@ foreach (glob($dir."/*") as $file) {
 
 if (filemtime($file) < time() -2592000 ) { 
     unlink($file);
+
+    echo("<pre>");
+    echo($file);
+    echo("/<pre>");
+    
 }
 
 /*
@@ -48,8 +53,4 @@ echo("/<pre>");
 
 }
 
-
-
-
-echo ("<br>");
 echo(" ログ削除です。");
