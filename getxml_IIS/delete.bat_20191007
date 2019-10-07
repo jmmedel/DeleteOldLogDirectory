@@ -1,0 +1,8 @@
+
+
+
+ php  C:\inetpub\wwwroot\getxml_IIS\deletelog1months.php
+
+
+
+start "C:\php\php.exe" -f C:\inetpub\wwwroot\getxml_IIS\deletelog1months.php
